@@ -9,6 +9,10 @@
 import UIKit
 
 class SelectedMovie: UIViewController {
+    
+    var destinoImagemCinema : String!
+    var destinoTextCinema : String!
+    var destinoDescricaoCinema : String!
 
     override func viewDidLoad() {
         super.viewDidLoad()

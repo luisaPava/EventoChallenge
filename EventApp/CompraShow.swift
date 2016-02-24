@@ -28,7 +28,9 @@ class CompraShow: UIViewController {
     var diaShow : String!
     var cidadeShow : String!
     
+
     var show : String!
+    
     
     @IBAction func increaseDecreaseMeia(sender: AnyObject) {
         contagemMeia.text = String(Int(stepperMeia.value))

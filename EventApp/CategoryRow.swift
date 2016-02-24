@@ -11,6 +11,8 @@ import UIKit
 class CategoryRow: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     var arr: [String] = []
+    var viewController: MainScreen!
+    var nomeSegue: String!
     
     var name : AnyObject? {
         get {
@@ -57,11 +59,15 @@ class CategoryRow: UITableViewCell, UICollectionViewDataSource, UICollectionView
         
         return cell
     }
-
     
-    func collectionview(collectionView: UICollectionView!, didSelectItemAtIndezPath indexPath: NSIndexPath!) {
-        name = arr[indexPath.row]
+    func collectionView(collectionView: UICollectionView, didHighlightItemAtIndexPath indexPath: NSIndexPath) {
+        
+        self.viewController.numeroSelecionado = indexPath.row
+        self.viewController.performSegueWithIdentifier(nomeSegue, sender: nil)
+    
     }
+    
+    
     
 
     

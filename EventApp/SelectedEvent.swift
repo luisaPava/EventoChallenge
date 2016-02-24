@@ -12,6 +12,8 @@ class SelectedEvent: UIViewController {
 
     @IBOutlet weak var newImgView: UIImageView!
     
+    @IBOutlet weak var newDescricaoShow: UITextView!
+    @IBOutlet weak var newLabelShow: UILabel!
     @IBOutlet weak var RJButton: UIButton!
     @IBOutlet weak var SPButton: UIButton!
     @IBOutlet weak var RSButton: UIButton!
@@ -26,6 +28,11 @@ class SelectedEvent: UIViewController {
     
     var nomeShow : String!
     
+//    var destinoImagem: String!
+    var destinoText: String!
+    var destinoDescricao:String!
+    
+    
     
     
     override func viewDidLoad() {
@@ -37,6 +44,10 @@ class SelectedEvent: UIViewController {
         RJButton.setTitle("20/02", forState: UIControlState.Normal)
         RJButton.setTitle("23/02", forState: UIControlState.Normal)
         RJButton.setTitle("29/02", forState: UIControlState.Normal)
+        
+//        newImgView.image = destinoImagem
+        newLabelShow.text = destinoText
+        newDescricaoShow.text = destinoDescricao
         
 //        newImgView.image = UIImage(named: name as! String)
 
