@@ -34,7 +34,7 @@ class CompraCinema: UIViewController , ZSeatSelectorDelegate {
         // 200 desse proximo comando muda a altura do frame (caixa), resto não sei
         
         
-        seats.frame = CGRectMake(0, 300, self.view.frame.size.width, 500)
+        seats.frame = CGRectMake(0, 300, self.view.frame.size.width, 120)
         // width e height muda o tamanho da cadeira
         
         
@@ -70,7 +70,7 @@ class CompraCinema: UIViewController , ZSeatSelectorDelegate {
         // 200 desse proximo comando muda a altura do frame (caixa), resto não sei
         
         
-        seats.frame = CGRectMake(0, 300, self.view.frame.size.width, 500)
+        seats.frame = CGRectMake(0, 300, self.view.frame.size.width, 120)
         // width e height muda o tamanho da cadeira
         
         
@@ -151,7 +151,7 @@ class CompraCinema: UIViewController , ZSeatSelectorDelegate {
         // 200 desse proximo comando muda a altura do frame (caixa), resto não sei
         
         
-        seats.frame = CGRectMake(0, 300, self.view.frame.size.width, 500)
+        seats.frame = CGRectMake(0, 300, self.view.frame.size.width, 120)
         // width e height muda o tamanho da cadeira
         
         
@@ -231,6 +231,61 @@ class CompraCinema: UIViewController , ZSeatSelectorDelegate {
         print("----\(seats.count)----\n")
         
     }
+    
+    
+    
+    
+    
+    @IBAction func confirmaLugares(sender: AnyObject) {
+        
+        
+        print(seats.selected_seats.count)
+        
+        if Int(stepperMeia.value) == 0 && Int(stepperInteira.value) == 0{
+            
+            let alertController = UIAlertController(title: "Atenção", message:
+                "Você não comprou nenhum ingresso.", preferredStyle: UIAlertControllerStyle.Alert)
+            alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+            
+            self.presentViewController(alertController, animated: true, completion: nil)
+            
+        }
+            
+        else{
+            
+            
+            
+            if
+                
+            seats.selected_seats.count == 0 {
+            
+                
+                let alertController = UIAlertController(title: "Atenção", message:
+                    "Você não selecionou nenhuma cadeira.", preferredStyle: UIAlertControllerStyle.Alert)
+                alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                
+                self.presentViewController(alertController, animated: true, completion: nil)
+            
+            }
+            
+            
+            // inserir identifier dos textfields da compra
+            else{
+                performSegueWithIdentifier("", sender: self)}
+        }
+
+        
+        
+    }
+    
+    
+    
+    
+    
+    
+    
+    
+    
     
     
     
