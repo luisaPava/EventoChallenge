@@ -271,24 +271,22 @@ class CompraCinema: UIViewController , ZSeatSelectorDelegate {
             
             // inserir identifier dos textfields da compra
             else{
-                performSegueWithIdentifier("", sender: self)}
-        }
+                
+                if seats.selected_seats.count != seats.selected_seat_limit{
+                    
+                    let alertController = UIAlertController(title: "Atenção", message:
+                        "Você não selecionou todas cadeiras.", preferredStyle: UIAlertControllerStyle.Alert)
+                    alertController.addAction(UIAlertAction(title: "Dismiss", style: UIAlertActionStyle.Default,handler: nil))
+                    
+                    self.presentViewController(alertController, animated: true, completion: nil)
+                    
+                }
 
-        
+                
+                //else{performSegueWithIdentifier("", sender: self)}}
+            }
         
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
     
     
     /*
@@ -297,8 +295,8 @@ class CompraCinema: UIViewController , ZSeatSelectorDelegate {
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
     // Get the new view controller using segue.destinationViewController.
-    // Pass the selected object to the new view controller.
+    // Pa}ss the selected object to the new view controller.
     }
     */
-    
+}
 }

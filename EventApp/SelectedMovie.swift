@@ -10,7 +10,7 @@ import UIKit
 
 class SelectedMovie: UIViewController {
     
-    var destinoImagemCinema : String!
+    var destinoImagemCinema : UIImage!
     var destinoTextCinema : String!
     var destinoDescricaoCinema : String!
 

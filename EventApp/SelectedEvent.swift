@@ -28,9 +28,9 @@ class SelectedEvent: UIViewController {
     
     var nomeShow : String!
     
-//    var destinoImagem: String!
+    var destinoImagem: UIImage!
     var destinoText: String!
-    var destinoDescricao:String!
+    var destinoDescricao: String!
     
     
     
@@ -45,7 +45,7 @@ class SelectedEvent: UIViewController {
         RJButton.setTitle("23/02", forState: UIControlState.Normal)
         RJButton.setTitle("29/02", forState: UIControlState.Normal)
         
-//        newImgView.image = destinoImagem
+        newImgView.image = destinoImagem
         newLabelShow.text = destinoText
         newDescricaoShow.text = destinoDescricao
         
