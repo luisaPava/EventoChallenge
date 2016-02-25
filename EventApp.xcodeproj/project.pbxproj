@@ -13,10 +13,6 @@
 		2BA09D5E1C7D0262004C0153 /* TelaFinal.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2BA09D5C1C7D0262004C0153 /* TelaFinal.xib */; };
 		2BA483511C7DF17600E044BB /* myViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BA483501C7DF17600E044BB /* myViewCollectionViewCell.swift */; };
 		2BC3401A1C7E54A0007F3C0B /* ZSeatSelector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC340151C7E54A0007F3C0B /* ZSeatSelector.swift */; };
-		2BC3401F1C7E5548007F3C0B /* A@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC3401B1C7E5548007F3C0B /* A@2x.png */; };
-		2BC340201C7E5548007F3C0B /* D@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC3401C1C7E5548007F3C0B /* D@2x.png */; };
-		2BC340211C7E5548007F3C0B /* S@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC3401D1C7E5548007F3C0B /* S@2x.png */; };
-		2BC340221C7E5548007F3C0B /* U@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 2BC3401E1C7E5548007F3C0B /* U@2x.png */; };
 		A761F7551C7C94F100560182 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761F7541C7C94F100560182 /* AppDelegate.swift */; };
 		A761F7571C7C94F100560182 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A761F7561C7C94F100560182 /* ViewController.swift */; };
 		A761F75A1C7C94F100560182 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A761F7581C7C94F100560182 /* Main.storyboard */; };
@@ -67,10 +63,6 @@
 		2BA09D5C1C7D0262004C0153 /* TelaFinal.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TelaFinal.xib; sourceTree = "<group>"; };
 		2BA483501C7DF17600E044BB /* myViewCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myViewCollectionViewCell.swift; sourceTree = "<group>"; };
 		2BC340151C7E54A0007F3C0B /* ZSeatSelector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ZSeatSelector.swift; sourceTree = "<group>"; };
-		2BC3401B1C7E5548007F3C0B /* A@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "A@2x.png"; path = "../../Dropbox/Eventos/ZSeatSelector-master copy/ZSeatSelector_Swift/ZSeatSelector_Swift/A@2x.png"; sourceTree = "<group>"; };
-		2BC3401C1C7E5548007F3C0B /* D@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "D@2x.png"; path = "../../Dropbox/Eventos/ZSeatSelector-master copy/ZSeatSelector_Swift/ZSeatSelector_Swift/D@2x.png"; sourceTree = "<group>"; };
-		2BC3401D1C7E5548007F3C0B /* S@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "S@2x.png"; path = "../../Dropbox/Eventos/ZSeatSelector-master copy/ZSeatSelector_Swift/ZSeatSelector_Swift/S@2x.png"; sourceTree = "<group>"; };
-		2BC3401E1C7E5548007F3C0B /* U@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "U@2x.png"; path = "../../Dropbox/Eventos/ZSeatSelector-master copy/ZSeatSelector_Swift/ZSeatSelector_Swift/U@2x.png"; sourceTree = "<group>"; };
 		A761F7511C7C94F100560182 /* EventApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = EventApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A761F7541C7C94F100560182 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A761F7561C7C94F100560182 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -159,10 +151,6 @@
 				A761F75D1C7C94F100560182 /* LaunchScreen.storyboard */,
 				A761F7821C7C953D00560182 /* TitleScreen.swift */,
 				A761F7831C7C953D00560182 /* TitleScreen.xib */,
-				2BC3401B1C7E5548007F3C0B /* A@2x.png */,
-				2BC3401C1C7E5548007F3C0B /* D@2x.png */,
-				2BC3401D1C7E5548007F3C0B /* S@2x.png */,
-				2BC3401E1C7E5548007F3C0B /* U@2x.png */,
 				2BC340151C7E54A0007F3C0B /* ZSeatSelector.swift */,
 				A761F7861C7C956800560182 /* LoginScreen.swift */,
 				A761F7871C7C956800560182 /* LoginScreen.xib */,
@@ -311,7 +299,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2BC3401F1C7E5548007F3C0B /* A@2x.png in Resources */,
 				A761F78D1C7CADC300560182 /* RegisterScreen.xib in Resources */,
 				A761F75F1C7C94F100560182 /* LaunchScreen.storyboard in Resources */,
 				2BA09D5E1C7D0262004C0153 /* TelaFinal.xib in Resources */,
@@ -320,10 +307,7 @@
 				A761F7891C7C956800560182 /* LoginScreen.xib in Resources */,
 				A761F7851C7C953D00560182 /* TitleScreen.xib in Resources */,
 				A761F7971C7CDAC900560182 /* SelectedEvent.xib in Resources */,
-				2BC340221C7E5548007F3C0B /* U@2x.png in Resources */,
-				2BC340201C7E5548007F3C0B /* D@2x.png in Resources */,
 				A761F79B1C7CE3F800560182 /* SelectedMovie.xib in Resources */,
-				2BC340211C7E5548007F3C0B /* S@2x.png in Resources */,
 				2BA09D5A1C7D022E004C0153 /* CompraCinema.xib in Resources */,
 				A761F75A1C7C94F100560182 /* Main.storyboard in Resources */,
 				A761F79F1C7CE74B00560182 /* CompraShow.xib in Resources */,
