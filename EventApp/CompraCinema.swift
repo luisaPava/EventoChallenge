@@ -283,7 +283,7 @@ class CompraCinema: UIViewController , ZSeatSelectorDelegate {
                 }
 
                 
-                //else{performSegueWithIdentifier("", sender: self)}}
+                else{performSegueWithIdentifier("InformacaoToComprar", sender: self)}}
             }
         
     }
@@ -299,4 +299,4 @@ class CompraCinema: UIViewController , ZSeatSelectorDelegate {
     }
     */
 }
-}
+

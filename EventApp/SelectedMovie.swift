@@ -13,11 +13,23 @@ class SelectedMovie: UIViewController {
     var destinoImagemCinema : UIImage!
     var destinoTextCinema : String!
     var destinoDescricaoCinema : String!
+    
+    @IBOutlet weak var imageSelectedMovie: UIImageView!
+    
+    @IBOutlet weak var titleLabel: UILabel!
 
+    @IBOutlet weak var descriptionLabel: UITextView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        imageSelectedMovie.image = destinoImagemCinema
+        titleLabel.text = destinoTextCinema
+        descriptionLabel.text = destinoDescricaoCinema
+        
+        
     }
 
     override func didReceiveMemoryWarning() {

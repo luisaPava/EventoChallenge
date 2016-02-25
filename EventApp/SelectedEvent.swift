@@ -49,8 +49,6 @@ class SelectedEvent: UIViewController {
         newLabelShow.text = destinoText
         newDescricaoShow.text = destinoDescricao
         
-//        newImgView.image = UIImage(named: name as! String)
-
         
         
         // Do any additional setup after loading the view.
