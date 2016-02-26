@@ -8,6 +8,17 @@
 
 import UIKit
 
+class ColoredDatePicker: UIDatePicker {
+    var changed = false
+    override func addSubview(view: UIView) {
+        if !changed {
+            changed = true
+            self.setValue(UIColor.whiteColor(), forKey: "textColor")
+        }
+        super.addSubview(view)
+    }
+}
+
 class DataDiaCinema: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var cont = 0
@@ -34,7 +45,10 @@ class DataDiaCinema: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         return pickerData[row]
     }
     
-
+    func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
+        let attributedString = NSAttributedString(string: pickerData[row], attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
+        return attributedString
+    }
 
     
     override func viewDidLoad() {
@@ -46,6 +60,11 @@ class DataDiaCinema: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         
         myPicker.dataSource = self
         myPicker.delegate = self
+        
+//        myDatePicker.setValue(UIColor.whiteColor(), forKeyPath: "textColor")
+//        myDatePicker.sendAction("setHighlightsToday", to: nil, forEvent: nil)
+//        myDatePicker.reloadInputViews()
+
     }
 
     override func didReceiveMemoryWarning() {

@@ -46,8 +46,8 @@ class CompraShow: UIViewController , UITextFieldDelegate {
     }
     
     func calculaTotal () {
-        totalInteira = Int(stepperInteira.value) * 50
-        totalMeia = Int(stepperMeia.value) * 25
+        totalInteira = Int(stepperInteira.value) * 250
+        totalMeia = Int(stepperMeia.value) * 125
         
         let soma: Int = totalInteira + totalMeia
         
