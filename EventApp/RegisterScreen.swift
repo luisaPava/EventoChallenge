@@ -8,10 +8,12 @@
 
 import UIKit
 
-class RegisterScreen: UIViewController {
+class RegisterScreen: UIViewController, UITextFieldDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        // changes mth 
+     
         
         // Do any additional setup after loading the view.
 //        
@@ -36,6 +38,14 @@ class RegisterScreen: UIViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
+    
+        // Matheus -- COPIAR AQUI
+        
+        cpfTextField.delegate = self
+        nomeTextField.delegate = self
+        
+        // END ATÉ AQUI
+        
         // Dispose of any resources that can be recreated.
     }
     
@@ -71,5 +81,44 @@ class RegisterScreen: UIViewController {
         }
         
     }
+    // --- COPIAR AQUI ----
     
+    //-- Matheus : Funcao Subir tela para exibir teclado
+   
+    func textFieldDidBeginEditing(cpfTextField: UITextField) {
+        animateViewMoving(true, moveValue: 100)
+    }
+    func textFieldDidEndEditing(cpfTextField: UITextField) {
+        animateViewMoving(false, moveValue: 100)
+    }
+    
+    func animateViewMoving (up:Bool, moveValue :CGFloat){
+        let movementDuration:NSTimeInterval = 0.3
+        let movement:CGFloat = ( up ? -moveValue : moveValue)
+        UIView.beginAnimations( "animateView", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(movementDuration )
+        self.view.frame = CGRectOffset(self.view.frame, 0,  movement)
+        UIView.commitAnimations()
+    }
+    
+    // ----- Função: Botao next ----
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == self.nomeTextField {
+            self.cpfTextField.becomeFirstResponder()
+        }
+        
+        return true
+    }
+    
+    
+    
+    // --- Função : Clicar fora da tela pra esconder o teclado.
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+
+    
+    // --- ATÉ AQUI
 }
