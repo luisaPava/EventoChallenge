@@ -333,7 +333,7 @@
                                 <rect key="frame" x="10" y="298" width="297" height="206"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="nHf-qM-ed7">
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="nHf-qM-ed7">
                                         <rect key="frame" x="8" y="14" width="280" height="179"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -376,7 +376,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" id="Jbn-HL-MG2">
-                                <rect key="frame" x="34" y="134" width="242" height="173"/>
+                                <rect key="frame" x="36" y="265" width="242" height="134"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" red="0.97647058823529409" green="0.54509803921568623" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                 <date key="date" timeIntervalSinceReferenceDate="478484617.31611401">
@@ -389,12 +389,17 @@
                                     <!--2016-03-30 12:00:00 +0000-->
                                 </date>
                                 <locale key="locale" localeIdentifier="pt_BR"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="datePickerAction:" destination="sb5-xd-zge" eventType="valueChanged" id="NdH-kz-gsj"/>
                                 </connections>
                             </datePicker>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0Yf-RI-EGU">
-                                <rect key="frame" x="49" y="407" width="61" height="30"/>
+                                <rect key="frame" x="49" y="505" width="61" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97647058823529409" green="0.60784313725490191" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -412,7 +417,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5tN-GI-1cp">
-                                <rect key="frame" x="130" y="407" width="61" height="30"/>
+                                <rect key="frame" x="130" y="505" width="61" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.60784313729999995" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -424,14 +429,14 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02 - 29 - 2016" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wvz-sR-xOe">
-                                <rect key="frame" x="0.0" y="335" width="320" height="21"/>
+                                <rect key="frame" x="0.0" y="433" width="320" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pRX-u9-Kdf">
-                                <rect key="frame" x="211" y="407" width="61" height="30"/>
+                                <rect key="frame" x="211" y="505" width="61" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.97647058819999999" green="0.60784313729999995" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
@@ -462,14 +467,34 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione o horário da sessão" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="cK9-id-onv">
-                                <rect key="frame" x="49" y="369" width="229" height="21"/>
+                                <rect key="frame" x="49" y="467" width="229" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione a data da sessão" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tHt-sU-ZCu">
-                                <rect key="frame" x="51" y="85" width="208" height="21"/>
+                                <rect key="frame" x="49" y="220" width="208" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <pickerView contentMode="scaleToFill" id="Kwn-Or-CwY">
+                                <rect key="frame" x="34" y="118" width="238" height="79"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                        <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="sb5-xd-zge" id="Rzv-yn-Ok0"/>
+                                    <outlet property="delegate" destination="sb5-xd-zge" id="bOH-f5-8N4"/>
+                                </connections>
+                            </pickerView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cinema" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="YYU-yo-bed">
+                                <rect key="frame" x="124" y="78" width="58" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -481,6 +506,7 @@
                     <connections>
                         <outlet property="dateSelected" destination="wvz-sR-xOe" id="SqL-jh-l2l"/>
                         <outlet property="myDatePicker" destination="Jbn-HL-MG2" id="uR3-ut-seq"/>
+                        <outlet property="myPicker" destination="Kwn-Or-CwY" id="tmT-Ix-oG6"/>
                         <segue destination="2Cd-CB-v14" kind="modal" identifier="dataToCadeira" id="8jP-Ki-zOJ"/>
                     </connections>
                 </viewController>
@@ -633,6 +659,11 @@
                                     <action selector="increaseDecreaseMeia:" destination="2Cd-CB-v14" eventType="valueChanged" id="uS8-dn-jNi"/>
                                 </connections>
                             </stepper>
+                            <view contentMode="scaleToFill" id="O4O-N4-SyZ">
+                                <rect key="frame" x="48" y="438" width="224" height="7"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.60784313725490191" blue="0.066666666666666666" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1527,7 +1558,7 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8jP-Ki-zOJ"/>
-        <segue reference="PH9-w3-EO4"/>
+        <segue reference="Kfc-Se-wYj"/>
         <segue reference="cb6-g0-u2i"/>
         <segue reference="Opl-CU-dbG"/>
     </inferredMetricsTieBreakers>

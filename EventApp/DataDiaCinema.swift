@@ -8,13 +8,35 @@
 
 import UIKit
 
-class DataDiaCinema: UIViewController {
+class DataDiaCinema: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     
     var cont = 0
     var filmeSelecionado: String!
 
     @IBOutlet weak var dateSelected: UILabel!
     @IBOutlet weak var myDatePicker: UIDatePicker!
+    
+
+    @IBOutlet weak var myPicker: UIPickerView!
+    let pickerData = ["Kinoplex Leblon","Cinemark Botafogo","Lagoon","Roxy","Estação Gávea","Estação NET"]
+
+    //MARK: - Delegates and data sources
+    //MARK: Data Sources
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    //MARK: Delegates
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    
+
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,7 +44,8 @@ class DataDiaCinema: UIViewController {
         
         cont = 0
         
-        dateSelected.hidden = true
+        myPicker.dataSource = self
+        myPicker.delegate = self
     }
 
     override func didReceiveMemoryWarning() {
