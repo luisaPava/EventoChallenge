@@ -13,6 +13,9 @@ class SelectedMovie: UIViewController {
     var destinoImagemCinema : UIImage!
     var destinoTextCinema : String!
     var destinoDescricaoCinema : String!
+    var urlFilme: String!
+    
+    
     
     @IBOutlet weak var imageSelectedMovie: UIImageView!
     
@@ -71,6 +74,26 @@ class SelectedMovie: UIViewController {
         }
         
     }
+    
+    
+    
+    
+    
+    
+    @IBAction func imdb(sender: AnyObject) {
+        
+        
+        if let url = NSURL(string: urlFilme){
+            UIApplication.sharedApplication().openURL(url)
+        }
+        
+        
+    }
+    
+    
+    
+    
+    
 
 
 }

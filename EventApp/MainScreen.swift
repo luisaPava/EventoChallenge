@@ -30,6 +30,7 @@ class MainScreen: UIViewController, UITableViewDataSource {
     
     var dadosDescritos2 = ["Aerosmith no Brasil 2016 em 3 cidades: São Paulo, Rio de Janeiro e Porto Alegre.", "Paul McCartney no Brasil 2016 em 3 cidades: São Paulo, Rio de Janeiro e Porto Alegre.", "Maroon 5 no Brasil 2016 em 3 cidades: São Paulo, Rio de Janeiro e Porto Alegre.", "Rock in Rio no Brasil 2016 em 3 cidades: São Paulo, Rio de Janeiro e Porto Alegre.", "David Gueta no Brasil 2016 em 3 cidades: São Paulo, Rio de Janeiro e Porto Alegre.", "Coldplay no Brasil 2016 em 3 cidades: São Paulo, Rio de Janeiro e Porto Alegre."]
     
+    var vetorUrl = ["http://www.imdb.com/title/tt1431045/?ref_=nv_sr_1","http://www.imdb.com/title/tt1663202/?ref_=fn_al_tt_1", "http://www.imdb.com/title/tt3170832/?ref_=fn_al_tt_1", "http://www.imdb.com/title/tt3498820/", "http://www.imdb.com/title/tt2975590/?ref_=nv_sr_1", "http://www.imdb.com/title/tt3659388/"]
 
     
     
@@ -91,6 +92,9 @@ class MainScreen: UIViewController, UITableViewDataSource {
                 destinationVC.destinoImagemCinema = UIImage(named: moviesWide[numeroSelecionado])
                destinationVC.destinoTextCinema = dadosTitulo1[numeroSelecionado]
                destinationVC.destinoDescricaoCinema = dadosDescritos1[numeroSelecionado]
+                
+                destinationVC.urlFilme = vetorUrl[numeroSelecionado]
+                
             }
         }
         

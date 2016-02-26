@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="e13-bh-WqS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
@@ -370,6 +370,15 @@
                                     </textView>
                                 </subviews>
                             </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="IWe-KB-x3j">
+                                <rect key="frame" x="133" y="460" width="55" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.60784313729999995" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="IMDB"/>
+                                <connections>
+                                    <action selector="imdb:" destination="p3B-MM-nB1" eventType="touchUpInside" id="wJ3-vb-X7d"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1585,8 +1594,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8jP-Ki-zOJ"/>
-        <segue reference="ySI-Ra-Jmh"/>
-        <segue reference="Opl-CU-dbG"/>
+        <segue reference="Kfc-Se-wYj"/>
         <segue reference="cb6-g0-u2i"/>
+        <segue reference="Opl-CU-dbG"/>
     </inferredMetricsTieBreakers>
 </document>
