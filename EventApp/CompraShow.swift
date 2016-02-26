@@ -179,10 +179,10 @@ class CompraShow: UIViewController , UITextFieldDelegate {
     //-- Matheus : Funcao Subir tela para exibir teclado
     
     func textFieldDidBeginEditing(cpfTextField: UITextField) {
-        animateViewMoving(true, moveValue: 100)
+        animateViewMoving(true, moveValue: 200)
     }
     func textFieldDidEndEditing(cpfTextField: UITextField) {
-        animateViewMoving(false, moveValue: 100)
+        animateViewMoving(false, moveValue: 200)
     }
     
     func animateViewMoving (up:Bool, moveValue :CGFloat){
