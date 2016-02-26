@@ -61,6 +61,24 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="TitleScreen_PrincipalLogo_Interface" id="Bjw-Za-NQz">
+                                <rect key="frame" x="35" y="121" width="196" height="156"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Show" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="p4O-wq-AXs">
+                                <rect key="frame" x="116" y="211" width="162" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="0.97647058819999999" green="0.60784313729999995" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Xa9-jp-gjn">
+                                <rect key="frame" x="189" y="211" width="162" height="54"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="30"/>
+                                <color key="textColor" red="0.97647058819999999" green="0.60784313729999995" blue="0.066666666669999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -161,6 +179,10 @@
                                     <outlet property="delegate" destination="d9A-xE-Ypm" id="YQP-lq-RGx"/>
                                 </connections>
                             </textField>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="TitleScreen_PrincipalLogo_Interface" id="2m1-rr-Mg9">
+                                <rect key="frame" x="86" y="143" width="158" height="124"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -171,6 +193,10 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9mP-ol-IhU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="TitleScreen_PrincipalLogo_Interface" id="P8y-jJ-qoT">
+                    <rect key="frame" x="0.0" y="0.0" width="196" height="156"/>
+                    <autoresizingMask key="autoresizingMask"/>
+                </imageView>
             </objects>
             <point key="canvasLocation" x="702" y="993"/>
         </scene>
@@ -330,11 +356,11 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="66q-cK-lwe">
-                                <rect key="frame" x="10" y="298" width="297" height="206"/>
+                                <rect key="frame" x="10" y="298" width="297" height="136"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" id="nHf-qM-ed7">
-                                        <rect key="frame" x="8" y="14" width="280" height="179"/>
+                                        <rect key="frame" x="8" y="0.0" width="280" height="136"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <string key="text">1822. Hugh Glass (Leonardo DiCaprio) parte para o oeste americano disposto a ganhar dinheiro caçando. Atacado por um urso, fica seriamente ferido e é abandonado à própria sorte pelo parceiro John Fitzgerald (Tom Hardy), que ainda rouba seus pertences. Entretanto, mesmo com toda adversidade, Glass consegue sobreviver e inicia uma árdua jornada em busca de vingança.</string>
@@ -1555,11 +1581,12 @@
         <image name="Progresso2" width="135" height="17"/>
         <image name="Shape" width="14" height="19"/>
         <image name="Shape2" width="14" height="14"/>
+        <image name="TitleScreen_PrincipalLogo_Interface" width="158" height="124"/>
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="8jP-Ki-zOJ"/>
-        <segue reference="Kfc-Se-wYj"/>
-        <segue reference="cb6-g0-u2i"/>
+        <segue reference="ySI-Ra-Jmh"/>
         <segue reference="Opl-CU-dbG"/>
+        <segue reference="cb6-g0-u2i"/>
     </inferredMetricsTieBreakers>
 </document>
