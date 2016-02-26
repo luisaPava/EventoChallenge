@@ -21,6 +21,8 @@ class DataDiaCinema: UIViewController {
         // Do any additional setup after loading the view.
         
         cont = 0
+        
+        dateSelected.hidden = true
     }
 
     override func didReceiveMemoryWarning() {
@@ -87,19 +89,19 @@ class DataDiaCinema: UIViewController {
                 destinationVC.filme = self.filmeSelecionado
 
                 if self.cont == 1{
-                    destinationVC.date = String(self.dateSelected.text)
+                    destinationVC.date = String(self.dateSelected.text!)
                     destinationVC.hora = "15:30"
                 }
                 else if self.cont == 2{
                     
-                    destinationVC.date = String(self.dateSelected.text)
+                    destinationVC.date = String(self.dateSelected.text!)
                     destinationVC.hora = "17:20"
                     
                 }
                     
                 else {
                     
-                    destinationVC.date = String(self.dateSelected.text)
+                    destinationVC.date = String(self.dateSelected.text!)
                     destinationVC.hora = "19:40"
                 }
             }

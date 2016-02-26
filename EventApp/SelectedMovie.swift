@@ -50,7 +50,7 @@ class SelectedMovie: UIViewController {
     @IBAction func comprar(sender: AnyObject) {
         
         
-        performSegueWithIdentifier("CinemaToDate", sender: nil)
+        performSegueWithIdentifier("CinemaToDate", sender: self)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -58,10 +58,10 @@ class SelectedMovie: UIViewController {
         
         if segue.identifier == "CinemaToDate"
         {
-            if let destinationVC = segue.destinationViewController as? CompraCinema{
+            if let destinationVC = segue.destinationViewController as? DataDiaCinema{
                 
                              
-                destinationVC.filme = self.destinoTextCinema
+                destinationVC.filmeSelecionado = self.destinoTextCinema
 
                 
             }
