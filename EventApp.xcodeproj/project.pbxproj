@@ -37,6 +37,9 @@
 		A761F79F1C7CE74B00560182 /* CompraShow.xib in Resources */ = {isa = PBXBuildFile; fileRef = A761F79D1C7CE74B00560182 /* CompraShow.xib */; };
 		EB74640F1C7D2F4500364ACC /* CategoryRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB74640D1C7D2F4500364ACC /* CategoryRow.swift */; };
 		EB7464101C7D2F4500364ACC /* CategoryRow.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB74640E1C7D2F4500364ACC /* CategoryRow.xib */; };
+		EB7E28321C7FD1A200E0B63E /* PagamentoCinema.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E28301C7FD1A200E0B63E /* PagamentoCinema.swift */; };
+		EB7E28331C7FD1A200E0B63E /* PagamentoCinema.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB7E28311C7FD1A200E0B63E /* PagamentoCinema.xib */; };
+		EB7E28351C7FD24900E0B63E /* DataDiaCinema.swift in Sources */ = {isa = PBXBuildFile; fileRef = EB7E28341C7FD24900E0B63E /* DataDiaCinema.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +96,9 @@
 		A761F79D1C7CE74B00560182 /* CompraShow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CompraShow.xib; sourceTree = "<group>"; };
 		EB74640D1C7D2F4500364ACC /* CategoryRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryRow.swift; sourceTree = "<group>"; };
 		EB74640E1C7D2F4500364ACC /* CategoryRow.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CategoryRow.xib; sourceTree = "<group>"; };
+		EB7E28301C7FD1A200E0B63E /* PagamentoCinema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PagamentoCinema.swift; sourceTree = "<group>"; };
+		EB7E28311C7FD1A200E0B63E /* PagamentoCinema.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PagamentoCinema.xib; sourceTree = "<group>"; };
+		EB7E28341C7FD24900E0B63E /* DataDiaCinema.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataDiaCinema.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,12 +172,15 @@
 				A761F79C1C7CE74B00560182 /* CompraShow.swift */,
 				A761F79D1C7CE74B00560182 /* CompraShow.xib */,
 				2BA09D571C7D022E004C0153 /* CompraCinema.swift */,
+				EB7E28301C7FD1A200E0B63E /* PagamentoCinema.swift */,
+				EB7E28311C7FD1A200E0B63E /* PagamentoCinema.xib */,
 				2BA09D581C7D022E004C0153 /* CompraCinema.xib */,
 				2BA09D5B1C7D0262004C0153 /* TelaFinal.swift */,
 				2BA09D5C1C7D0262004C0153 /* TelaFinal.xib */,
 				EB74640D1C7D2F4500364ACC /* CategoryRow.swift */,
 				2BA483501C7DF17600E044BB /* myViewCollectionViewCell.swift */,
 				EB74640E1C7D2F4500364ACC /* CategoryRow.xib */,
+				EB7E28341C7FD24900E0B63E /* DataDiaCinema.swift */,
 			);
 			path = EventApp;
 			sourceTree = "<group>";
@@ -310,6 +319,7 @@
 				A761F79B1C7CE3F800560182 /* SelectedMovie.xib in Resources */,
 				2BA09D5A1C7D022E004C0153 /* CompraCinema.xib in Resources */,
 				A761F75A1C7C94F100560182 /* Main.storyboard in Resources */,
+				EB7E28331C7FD1A200E0B63E /* PagamentoCinema.xib in Resources */,
 				A761F79F1C7CE74B00560182 /* CompraShow.xib in Resources */,
 				A761F7911C7CC55000560182 /* Register2 Screen.xib in Resources */,
 			);
@@ -345,12 +355,14 @@
 				A761F7931C7CCA4000560182 /* MainScreen.swift in Sources */,
 				A761F79A1C7CE3F800560182 /* SelectedMovie.swift in Sources */,
 				EB74640F1C7D2F4500364ACC /* CategoryRow.swift in Sources */,
+				EB7E28321C7FD1A200E0B63E /* PagamentoCinema.swift in Sources */,
 				2BA09D5D1C7D0262004C0153 /* TelaFinal.swift in Sources */,
 				A761F78C1C7CADC300560182 /* RegisterScreen.swift in Sources */,
 				A761F7571C7C94F100560182 /* ViewController.swift in Sources */,
 				A761F7881C7C956800560182 /* LoginScreen.swift in Sources */,
 				A761F7551C7C94F100560182 /* AppDelegate.swift in Sources */,
 				A761F7841C7C953D00560182 /* TitleScreen.swift in Sources */,
+				EB7E28351C7FD24900E0B63E /* DataDiaCinema.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

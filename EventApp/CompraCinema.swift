@@ -14,6 +14,10 @@ class CompraCinema: UIViewController , ZSeatSelectorDelegate {
     var totalMeia: Int!
     var totalInteira: Int!
     
+    var date: String! // Property you want to pass to
+    var filme: String!
+    var hora: String!
+    
     
     
     @IBAction func increaseDecreaseMeia(sender: AnyObject) {
@@ -285,6 +289,35 @@ class CompraCinema: UIViewController , ZSeatSelectorDelegate {
                 
                 else{performSegueWithIdentifier("InformacaoToComprar", sender: self)}}
             }
+        
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
+        if segue.identifier == "compraCinemaToFinal"
+        {
+            if let destinationVC = segue.destinationViewController as? PagamentoCinema{
+                
+                
+                
+                destinationVC.cinema = self.filme
+                destinationVC.qtdMeias = Int(stepperMeia.value)
+                destinationVC.qtdInteiras = Int(stepperInteira.value)
+                
+                destinationVC.valorTot = Int(valorTotal.text!)
+                
+                destinationVC.date = self.date
+                destinationVC.hora = self.hora
+                
+            }
+            
+            
+            
+        }
+        
+        
+        
         
     }
     

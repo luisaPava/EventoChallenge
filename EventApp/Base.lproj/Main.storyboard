@@ -177,7 +177,7 @@
                                         <rect key="frame" x="0.0" y="28" width="320" height="212"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cLW-4M-yN7" id="WU2-1i-34z">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="211.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="211"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="zcx-kp-PfW">
@@ -191,7 +191,7 @@
                                                     </collectionViewFlowLayout>
                                                     <cells>
                                                         <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="videoCell" id="QVe-lO-Yt8" customClass="myViewCollectionViewCell" customModule="EventApp" customModuleProvider="target">
-                                                            <rect key="frame" x="0.0" y="23.5" width="119" height="164"/>
+                                                            <rect key="frame" x="0.0" y="24" width="119" height="164"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
                                                                 <rect key="frame" x="0.0" y="0.0" width="119" height="164"/>
@@ -273,7 +273,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="O Regresso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="6dv-7B-ceX">
-                                <rect key="frame" x="20" y="266" width="191" height="29"/>
+                                <rect key="frame" x="20" y="266" width="280" height="29"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -293,20 +293,29 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="comprar:" destination="p3B-MM-nB1" eventType="touchUpInside" id="6ik-Oh-Blb"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="EkJ-J4-kvZ">
                                 <rect key="frame" x="0.0" y="65" width="320" height="193"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="nHf-qM-ed7">
-                                <rect key="frame" x="18" y="298" width="280" height="212"/>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="66q-cK-lwe">
+                                <rect key="frame" x="10" y="298" width="297" height="206"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <string key="text">1822. Hugh Glass (Leonardo DiCaprio) parte para o oeste americano disposto a ganhar dinheiro caçando. Atacado por um urso, fica seriamente ferido e é abandonado à própria sorte pelo parceiro John Fitzgerald (Tom Hardy), que ainda rouba seus pertences. Entretanto, mesmo com toda adversidade, Glass consegue sobreviver e inicia uma árdua jornada em busca de vingança.</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" id="nHf-qM-ed7">
+                                        <rect key="frame" x="8" y="-3" width="280" height="209"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <string key="text">1822. Hugh Glass (Leonardo DiCaprio) parte para o oeste americano disposto a ganhar dinheiro caçando. Atacado por um urso, fica seriamente ferido e é abandonado à própria sorte pelo parceiro John Fitzgerald (Tom Hardy), que ainda rouba seus pertences. Entretanto, mesmo com toda adversidade, Glass consegue sobreviver e inicia uma árdua jornada em busca de vingança.</string>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -314,12 +323,116 @@
                         <outlet property="descriptionLabel" destination="nHf-qM-ed7" id="8F0-EV-SD1"/>
                         <outlet property="imageSelectedMovie" destination="EkJ-J4-kvZ" id="cLg-gL-ebU"/>
                         <outlet property="titleLabel" destination="6dv-7B-ceX" id="7NM-Z1-55Z"/>
-                        <segue destination="2Cd-CB-v14" kind="modal" identifier="SelectedMovieToCompraCinema" id="TkH-2j-LHG"/>
+                        <segue destination="sb5-xd-zge" kind="modal" identifier="CinemaToDate" id="sOY-Vk-Z73"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wcj-Gg-h8E" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1603" y="1904"/>
+            <point key="canvasLocation" x="1518" y="1988"/>
+        </scene>
+        <!--Data Dia Cinema-->
+        <scene sceneID="ffe-3P-rEH">
+            <objects>
+                <viewController id="sb5-xd-zge" customClass="DataDiaCinema" customModule="EventApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o4R-68-sOi">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="BG GRADIENT + BG TRANSPARENT Copy" id="ZLE-xo-erK">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" useCurrentDate="NO" id="Jbn-HL-MG2">
+                                <rect key="frame" x="34" y="134" width="242" height="173"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" red="0.97647058823529409" green="0.54509803921568623" blue="0.090196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                <date key="date" timeIntervalSinceReferenceDate="478484617.31611401">
+                                    <!--2016-03-01 00:23:37 +0000-->
+                                </date>
+                                <date key="minimumDate" timeIntervalSinceReferenceDate="478436400">
+                                    <!--2016-02-29 11:00:00 +0000-->
+                                </date>
+                                <date key="maximumDate" timeIntervalSinceReferenceDate="483710400">
+                                    <!--2016-04-30 12:00:00 +0000-->
+                                </date>
+                                <locale key="locale" localeIdentifier="pt_BR"/>
+                                <connections>
+                                    <action selector="datePickerAction:" destination="sb5-xd-zge" eventType="valueChanged" id="NdH-kz-gsj"/>
+                                </connections>
+                            </datePicker>
+                            <navigationBar contentMode="scaleToFill" id="KDV-m2-POd">
+                                <rect key="frame" x="0.0" y="23" width="320" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <items>
+                                    <navigationItem title="Title" id="o4H-as-0MY">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="OS7-oC-HxH">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="3Si-g5-LwG">
+                                                <rect key="frame" x="16" y="7" width="71" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Voltar"/>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0Yf-RI-EGU">
+                                <rect key="frame" x="34" y="385" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97647058823529409" green="0.60784313725490191" blue="0.098039215686274508" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="15:30">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerToRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maksToBouns" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="HourSelected:" destination="sb5-xd-zge" eventType="touchUpInside" id="zu4-DP-oe5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5tN-GI-1cp">
+                                <rect key="frame" x="130" y="385" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.60784313729999995" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="17:20">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="HoursSlected:" destination="sb5-xd-zge" eventType="touchUpInside" id="ffL-Uf-Maz"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="pRX-u9-Kdf">
+                                <rect key="frame" x="215" y="385" width="61" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.97647058819999999" green="0.60784313729999995" blue="0.098039215690000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="19:40">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="HourSlected:" destination="sb5-xd-zge" eventType="touchUpInside" id="ycM-XB-c58"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="wvz-sR-xOe">
+                                <rect key="frame" x="134" y="331" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="dateSelected" destination="wvz-sR-xOe" id="SqL-jh-l2l"/>
+                        <outlet property="myDatePicker" destination="Jbn-HL-MG2" id="uR3-ut-seq"/>
+                        <segue destination="2Cd-CB-v14" kind="modal" identifier="dataToCadeira" id="8jP-Ki-zOJ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="7M4-UZ-Ute" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1885" y="1988"/>
         </scene>
         <!--Comprar-->
         <scene sceneID="3kl-kS-uyT">
@@ -445,7 +558,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Voltar"/>
                                                 <connections>
-                                                    <segue destination="p3B-MM-nB1" kind="modal" identifier="CadeirasToMovie" id="4Dv-wg-64m"/>
+                                                    <segue destination="e13-bh-WqS" kind="modal" identifier="cadeirasToMain" id="Ek7-jp-tRc"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -467,12 +580,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZW2-YH-Stv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2128" y="1926"/>
+            <point key="canvasLocation" x="2270" y="2037"/>
         </scene>
-        <!--View Controller-->
+        <!--Pagamento Cinema-->
         <scene sceneID="f5k-rT-YAQ">
             <objects>
-                <viewController id="BBe-42-yxJ" sceneMemberID="viewController">
+                <viewController id="BBe-42-yxJ" customClass="PagamentoCinema" customModule="EventApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KsR-Za-X4d">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -569,6 +682,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="confirmaCompraCinema:" destination="BBe-42-yxJ" eventType="touchUpInside" id="kJW-tq-kaB"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Informações do pagamento" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ncP-Rd-4GM">
                                 <rect key="frame" x="40" y="111" width="211" height="29"/>
@@ -581,12 +697,16 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <connections>
-                        <segue destination="Dib-Ae-Wgz" kind="modal" id="cKY-wF-XNS"/>
+                        <outlet property="codigoCinema" destination="Ioa-m3-6HU" id="5fp-aG-SLr"/>
+                        <outlet property="nomeCinema" destination="HRB-Or-Mgh" id="oBu-CO-lPY"/>
+                        <outlet property="numeroCartaoCinema" destination="yUH-hV-MdZ" id="JRw-Gt-33f"/>
+                        <outlet property="validadeCinema" destination="iim-fo-gCy" id="1wd-eo-Fy1"/>
+                        <segue destination="Dib-Ae-Wgz" kind="modal" identifier="compraCinemaToFinal" id="cKY-wF-XNS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5s-ha-5HF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2565" y="1994"/>
+            <point key="canvasLocation" x="2660" y="2032"/>
         </scene>
         <!--Tela Final-->
         <scene sceneID="S7E-ws-9RF">
@@ -613,6 +733,9 @@
                                     </userDefinedRuntimeAttribute>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maksToBounds" value="YES"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="voltarMain:" destination="Dib-Ae-Wgz" eventType="touchUpInside" id="8lz-7s-Nda"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sua compra foi realizada com sucesso" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Cp2-eX-PU1">
                                 <rect key="frame" x="27" y="137" width="293" height="30"/>
@@ -649,11 +772,12 @@
                         <outlet property="dadosCompraLabel" destination="9j0-rJ-ahl" id="8Fw-VZ-HDc"/>
                         <outlet property="infoPessoalLabel" destination="cfS-HX-o7P" id="tYl-zl-Brn"/>
                         <outlet property="showLabel" destination="gi4-Dr-2a8" id="dsv-Wu-N0G"/>
+                        <segue destination="e13-bh-WqS" kind="modal" identifier="TelaFinalToMain" id="JWZ-4m-haL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="B7w-sz-WFm" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2890" y="1569"/>
+            <point key="canvasLocation" x="2339" y="1280"/>
         </scene>
         <!--Selected Event-->
         <scene sceneID="MzO-6Y-fD9">
@@ -690,15 +814,8 @@
                                     </navigationItem>
                                 </items>
                             </navigationBar>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rolling Stones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Z5-OD-wXd">
-                                <rect key="frame" x="20" y="311" width="191" height="29"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Rolling Stones no Brasil 2016 em 3 cidades: São Paulo, Rio de Janeiro e Porto Alegre." textAlignment="justified" id="SvG-4p-imH">
-                                <rect key="frame" x="20" y="348" width="240" height="67"/>
+                                <rect key="frame" x="45" y="355" width="240" height="67"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -778,13 +895,20 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="I6X-zk-1Y0">
-                                <rect key="frame" x="-17" y="59" width="337" height="238"/>
+                                <rect key="frame" x="-17" y="65" width="337" height="232"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Selecione a data desejada" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="EOh-EK-5ia">
                                 <rect key="frame" x="73" y="444" width="200" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rolling Stones" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="1Z5-OD-wXd">
+                                <rect key="frame" x="45" y="318" width="264" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -828,7 +952,7 @@
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <state key="normal" title="Voltar"/>
                                                 <connections>
-                                                    <segue destination="DZA-MA-XgR" kind="modal" identifier="TipoIngressoToShow" id="EUo-0v-hZz"/>
+                                                    <segue destination="e13-bh-WqS" kind="modal" identifier="comprarShowToMain" id="PH9-w3-EO4"/>
                                                 </connections>
                                             </button>
                                         </barButtonItem>
@@ -1284,10 +1408,8 @@
         <image name="Shape2" width="14" height="14"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="EUo-0v-hZz"/>
-        <segue reference="2dX-fa-5Uq"/>
+        <segue reference="JWZ-4m-haL"/>
         <segue reference="cKY-wF-XNS"/>
-        <segue reference="4Dv-wg-64m"/>
-        <segue reference="Kfc-Se-wYj"/>
+        <segue reference="2dX-fa-5Uq"/>
     </inferredMetricsTieBreakers>
 </document>

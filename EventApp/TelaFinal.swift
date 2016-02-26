@@ -25,12 +25,13 @@ class TelaFinal: UIViewController {
     var cartao : String!
     var nome : String!
     var nomeShow : String!
+    var hora: String!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         
-        showLabel.text = "\(nomeShow)     -    \(dia)"
+        showLabel.text = "\(nomeShow)     -    \(dia)   -  \(hora)"
         infoPessoalLabel.text = "Nome:\(nome) \n Cartão:\(cartao)"
         dadosCompraLabel.text = "Inteiras:  \(String(qtdInteiras)) -    Meias:  \(String(qtdMeias)) \n Valor total da compra:  \(String(valorTot))"
         
@@ -44,6 +45,10 @@ class TelaFinal: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    @IBAction func voltarMain(sender: AnyObject) {
+        
+    performSegueWithIdentifier("TelaFinalToMain", sender: nil)
     }
 
 }
