@@ -18,9 +18,6 @@ class TitleScreen: UIViewController {
         
     }
     
-
-    
-    
     @IBOutlet weak var BackgroundTitle: UIImageView!
     
 
