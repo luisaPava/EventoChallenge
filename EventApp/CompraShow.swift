@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CompraShow: UIViewController {
+class CompraShow: UIViewController , UITextFieldDelegate {
     
 
     @IBOutlet weak var stepperMeia: UIStepper!
@@ -67,6 +67,18 @@ class CompraShow: UIViewController {
         
         stepperInteira.maximumValue = 10
         stepperInteira.minimumValue = 0
+     
+        
+        // Matheus -- COPIAR AQUI
+        
+        numCartaoTextField.delegate = self
+        nomeTextField.delegate = self
+        codTextField.delegate = self
+        valTextField.delegate = self
+        
+        // END ATÉ AQUI
+        
+        
         
     }
     
@@ -160,8 +172,56 @@ class CompraShow: UIViewController {
         
         
         
-        
+        }
+
+    // --- COPIAR AQUI ----
+    
+    //-- Matheus : Funcao Subir tela para exibir teclado
+    
+    func textFieldDidBeginEditing(cpfTextField: UITextField) {
+        animateViewMoving(true, moveValue: 100)
     }
+    func textFieldDidEndEditing(cpfTextField: UITextField) {
+        animateViewMoving(false, moveValue: 100)
+    }
+    
+    func animateViewMoving (up:Bool, moveValue :CGFloat){
+        let movementDuration:NSTimeInterval = 0.3
+        let movement:CGFloat = ( up ? -moveValue : moveValue)
+        UIView.beginAnimations( "animateView", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(movementDuration )
+        self.view.frame = CGRectOffset(self.view.frame, 0,  movement)
+        UIView.commitAnimations()
+    }
+    
+    // ----- Função: Botao next ----
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == self.numCartaoTextField {
+            self.nomeTextField.becomeFirstResponder()
+        }
+        if textField == self.nomeTextField {
+            self.codTextField.becomeFirstResponder()
+        }
+        if textField == self.codTextField {
+            self.valTextField.becomeFirstResponder()
+        }
+        return true
+    }
+    
+    
+    
+    // --- Função : Clicar fora da tela pra esconder o teclado.
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    
+    // --- ATÉ AQUI
+
+
+
 }
 
 

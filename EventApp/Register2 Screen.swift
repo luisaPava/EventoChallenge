@@ -8,10 +8,16 @@
 
 import UIKit
 
-class Register2_Screen: UIViewController {
+class Register2_Screen: UIViewController, UITextFieldDelegate  {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        // Matheus -- COPIAR AQUI
+        
+        emailTextField.delegate = self
+        senhaTextField.delegate = self
+        confirmacaoSenhaTextView.delegate = self
+        // END ATÉ AQUI
 
         // Do any additional setup after loading the view.
     }
@@ -19,6 +25,8 @@ class Register2_Screen: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+
+    
     }
     
 
@@ -38,6 +46,8 @@ class Register2_Screen: UIViewController {
     @IBOutlet weak var senhaTextField: UITextField!
 
     @IBOutlet weak var confirmacaoSenhaTextView: UITextField!
+    
+    
     
     
     @IBAction func ParaMain(sender: AnyObject) {
@@ -65,4 +75,48 @@ class Register2_Screen: UIViewController {
     
 }
 
+    // --- COPIAR AQUI ----
+    
+    //-- Matheus : Funcao Subir tela para exibir teclado
+    
+    func textFieldDidBeginEditing(cpfTextField: UITextField) {
+        animateViewMoving(true, moveValue: 100)
+    }
+    func textFieldDidEndEditing(cpfTextField: UITextField) {
+        animateViewMoving(false, moveValue: 100)
+    }
+    
+    func animateViewMoving (up:Bool, moveValue :CGFloat){
+        let movementDuration:NSTimeInterval = 0.3
+        let movement:CGFloat = ( up ? -moveValue : moveValue)
+        UIView.beginAnimations( "animateView", context: nil)
+        UIView.setAnimationBeginsFromCurrentState(true)
+        UIView.setAnimationDuration(movementDuration )
+        self.view.frame = CGRectOffset(self.view.frame, 0,  movement)
+        UIView.commitAnimations()
+    }
+    
+    // ----- Função: Botao next ----
+    
+    func textFieldShouldReturn(textField: UITextField) -> Bool {
+        if textField == self.emailTextField {
+            self.senhaTextField.becomeFirstResponder()
+        }
+        if textField == self.senhaTextField {
+            self.confirmacaoSenhaTextView.becomeFirstResponder()
+        }
+        return true
+    }
+    
+    
+    
+    // --- Função : Clicar fora da tela pra esconder o teclado.
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        self.view.endEditing(true)
+    }
+    
+    
+    // --- ATÉ AQUI
+    
+    
 }
