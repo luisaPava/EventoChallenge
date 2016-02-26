@@ -10,11 +10,8 @@ import UIKit
 
 class TelaFinal: UIViewController {
 
-    @IBOutlet weak var showLabel: UILabel!
     
-    @IBOutlet weak var infoPessoalLabel: UILabel!
-    
-    @IBOutlet weak var dadosCompraLabel: UILabel!
+    @IBOutlet weak var infoFinal: UITextView!
     
     
     var cidade : String!
@@ -30,17 +27,20 @@ class TelaFinal: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        if hora == nil{
+        infoFinal.text = "\(nomeShow)     -    \(dia)\n Nome:\(nome) \n Cartão:\(cartao)\n Inteiras:  \(String(qtdInteiras)) -    Meias:  \(String(qtdMeias)) \n \n Valor total da compra:  \(String(valorTot))"
+        }
         
-        showLabel.text = "\(nomeShow)     -    \(dia)   -  \(hora)"
-        infoPessoalLabel.text = "Nome:\(nome) \n Cartão:\(cartao)"
-        dadosCompraLabel.text = "Inteiras:  \(String(qtdInteiras)) -    Meias:  \(String(qtdMeias)) \n Valor total da compra:  \(String(valorTot))"
+        else{
+            
+        infoFinal.text = "\(nomeShow)  -    \(dia)  -  \(hora)\n Nome:\(nome) \n Cartão:\(cartao)\n Inteiras:  \(String(qtdInteiras)) -    Meias:  \(String(qtdMeias)) \n \n Valor total da compra:  \(String(valorTot))"
+
+    }
         
-        
-        
-        
+    }
+    
         
         // Do any additional setup after loading the view.
-    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

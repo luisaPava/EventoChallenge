@@ -22,8 +22,8 @@ class PagamentoCinema: UIViewController, UITextFieldDelegate  {
     var cinema: String!
     var date:String! // Property you want to pass to
     var hora: String!
-    var qtdMeias: Int!
-    var qtdInteiras: Int!
+    var qtdeMeias: Int!
+    var qtdeInteiras: Int!
     var valorTot: Int!
     
 
@@ -63,6 +63,7 @@ class PagamentoCinema: UIViewController, UITextFieldDelegate  {
     */
     @IBAction func confirmaCompraCinema(sender: AnyObject) {
         
+        print(numeroCartaoCinema.text, nomeCinema.text)
         
         if numeroCartaoCinema.text!.isEmpty || nomeCinema.text!.isEmpty || codigoCinema.text!.isEmpty || validadeCinema.text!.isEmpty {
             
@@ -79,14 +80,13 @@ class PagamentoCinema: UIViewController, UITextFieldDelegate  {
                 
                 
                 performSegueWithIdentifier("compraCinemaToFinal", sender: self)
+         
+            
             }
         }
 
     
-    
-    
-
-    
+ 
     
     
     
@@ -100,8 +100,8 @@ class PagamentoCinema: UIViewController, UITextFieldDelegate  {
                 
                 
                 destinationVC.cidade = self.cinema
-                destinationVC.qtdMeias = self.qtdMeias
-                destinationVC.qtdInteiras = self.qtdInteiras
+                destinationVC.qtdMeias = self.qtdeMeias
+                destinationVC.qtdInteiras = self.qtdeInteiras
 //
                 destinationVC.valorTot = String(self.valorTot)
 //

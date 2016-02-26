@@ -295,15 +295,15 @@ class CompraCinema: UIViewController , ZSeatSelectorDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
         
-        if segue.identifier == "compraCinemaToFinal"
+        if segue.identifier == "InformacaoToComprar"
         {
             if let destinationVC = segue.destinationViewController as? PagamentoCinema{
                 
                 
                 
                 destinationVC.cinema = self.filme
-                destinationVC.qtdMeias = Int(stepperMeia.value)
-                destinationVC.qtdInteiras = Int(stepperInteira.value)
+                destinationVC.qtdeMeias = Int(stepperMeia.value)
+                destinationVC.qtdeInteiras = Int(stepperInteira.value)
                 
                 destinationVC.valorTot = Int(valorTotal.text!)
                 

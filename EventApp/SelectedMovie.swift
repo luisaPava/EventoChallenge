@@ -52,5 +52,25 @@ class SelectedMovie: UIViewController {
         
         performSegueWithIdentifier("CinemaToDate", sender: nil)
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+        
+        if segue.identifier == "CinemaToDate"
+        {
+            if let destinationVC = segue.destinationViewController as? CompraCinema{
+                
+                             
+                destinationVC.filme = self.destinoTextCinema
+
+                
+            }
+            
+            
+            
+        }
+        
+    }
+
 
 }

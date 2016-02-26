@@ -17,9 +17,11 @@ class MainScreen: UIViewController, UITableViewDataSource {
     
     var dados1 = ["1.png","2.png", "3.png", "4.png", "5.png", "6.png"]
     var dados2 = ["7.png", "8.png", "9.png", "10.png", "11.png", "12.png"]
+   
+    
     //arrays em que entrarão as imagens wide para a tela de informações sobre o filme
-    var moviesWide = []
-    var showsWide = []
+    var moviesWide = ["1wide.jpg","2wide.jpg", "3wide.jpg", "4wide.jpg", "5wide.jpg", "6wide.jpg"]
+    var showsWide = ["7wide.jpg","8wide.jpg", "9wide.jpg", "10wide.jpg", "11wide.jpg", "12wide.jpg"]
 
     var dadosTitulo1 = ["Deadpool", "O Regresso", "O quarto de Jack", "Civil War", "Batman vs Superman", "Perdido em marte"]
     var dadosTitulo2 = ["Aerosmith", "Paul McCartney", "Maroon 5", "Rock in Rio", "David Gueta", "Coldplay"]
@@ -86,7 +88,7 @@ class MainScreen: UIViewController, UITableViewDataSource {
             if let destinationVC = segue.destinationViewController as? SelectedMovie {
     
 
-                destinationVC.destinoImagemCinema = UIImage(named: dados1[numeroSelecionado])
+                destinationVC.destinoImagemCinema = UIImage(named: moviesWide[numeroSelecionado])
                destinationVC.destinoTextCinema = dadosTitulo1[numeroSelecionado]
                destinationVC.destinoDescricaoCinema = dadosDescritos1[numeroSelecionado]
             }
@@ -96,7 +98,7 @@ class MainScreen: UIViewController, UITableViewDataSource {
         {
             if let destinationVC = segue.destinationViewController as? SelectedEvent {
                 
-                destinationVC.destinoImagem = UIImage(named: dados2[numeroSelecionado])
+                destinationVC.destinoImagem = UIImage(named: showsWide[numeroSelecionado])
                 destinationVC.destinoText = dadosTitulo2[numeroSelecionado]
                 destinationVC.destinoDescricao = dadosDescritos2[numeroSelecionado]
                 
