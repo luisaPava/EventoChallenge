@@ -26,7 +26,6 @@ class SelectedEvent: UIViewController {
     
     var cont = 0
     
-    var nomeShow : String!
     
     var destinoImagem: UIImage!
     var destinoText: String!
@@ -39,7 +38,6 @@ class SelectedEvent: UIViewController {
         super.viewDidLoad()
         
         self.cont = 0
-        self.nomeShow = "Rolling Stones"
         
         RJButton.setTitle("20/02", forState: UIControlState.Normal)
         RJButton.setTitle("23/02", forState: UIControlState.Normal)
@@ -87,16 +85,19 @@ class SelectedEvent: UIViewController {
         {
             if let destinationVC = segue.destinationViewController as? CompraShow{
                 
-                destinationVC.show = self.nomeShow
+ 
                 
                 if self.cont == 1{
                     destinationVC.diaShow = "20/02"
                     destinationVC.cidadeShow = "Rio de Janeiro"
+                    destinationVC.show = self.destinoText
                 }
                 else if self.cont == 2{
                     
                     destinationVC.diaShow = "23/02"
                     destinationVC.cidadeShow = "São Paulo"
+                    destinationVC.show = self.destinoText
+
                     
                 }
                     
@@ -104,6 +105,8 @@ class SelectedEvent: UIViewController {
                     
                     destinationVC.diaShow = "29/02"
                     destinationVC.cidadeShow = "Rio Grande so Sul"
+                    destinationVC.show = self.destinoText
+
                 }
             }
             

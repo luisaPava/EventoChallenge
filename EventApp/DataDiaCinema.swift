@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+// Classe pra mudar a cor do datepicker - Luisa
+
 class ColoredDatePicker: UIDatePicker {
     var changed = false
     override func addSubview(view: UIView) {
@@ -29,10 +32,16 @@ class DataDiaCinema: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     
 
     @IBOutlet weak var myPicker: UIPickerView!
+    
+    //vetor de opcoes para o picker view
+    
     let pickerData = ["Kinoplex Leblon","Cinemark Botafogo","Lagoon","Roxy","Estação Gávea","Estação NET"]
 
     //MARK: - Delegates and data sources
     //MARK: Data Sources
+    
+    //funcoes do picker view
+    
     func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
         return 1
     }
@@ -44,6 +53,9 @@ class DataDiaCinema: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
     func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
     }
+    
+    
+    //mudar a cor do picker view para branco
     
     func pickerView(pickerView: UIPickerView, attributedTitleForRow row: Int, forComponent component: Int) -> NSAttributedString? {
         let attributedString = NSAttributedString(string: pickerData[row], attributes: [NSForegroundColorAttributeName: UIColor.whiteColor()])
@@ -61,9 +73,8 @@ class DataDiaCinema: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         myPicker.dataSource = self
         myPicker.delegate = self
         
-//        myDatePicker.setValue(UIColor.whiteColor(), forKeyPath: "textColor")
-//        myDatePicker.sendAction("setHighlightsToday", to: nil, forEvent: nil)
-//        myDatePicker.reloadInputViews()
+        dateSelected.hidden = true  //esconde a label do date picker
+
 
     }
 
@@ -92,6 +103,9 @@ class DataDiaCinema: UIViewController, UIPickerViewDelegate, UIPickerViewDataSou
         // Pass the selected object to the new view controller.
     }
     */
+    
+    //proxima tela, depende do botao
+    
     @IBAction func HourSelected(sender: AnyObject) {
         
         self.cont = 1

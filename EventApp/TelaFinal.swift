@@ -28,12 +28,12 @@ class TelaFinal: UIViewController {
         super.viewDidLoad()
         
         if hora == nil{
-        infoFinal.text = "\(nomeShow)   -   \(dia)\n Nome:   \(nome) \n Cartão:   \(cartao)\n Inteiras:  \(String(qtdInteiras))   -    Meias:  \(String(qtdMeias)) \n  Valor total da compra:  \(String(valorTot))"
+        infoFinal.text = " \(nomeShow)   -   \(dia)\n Nome:   \(nome) \n Cartão:   \(cartao)\n Inteiras:  \(String(qtdInteiras))   -    Meias:  \(String(qtdMeias)) \n Valor total da compra:  \(String(valorTot))"
         }
         
         else{
             
-        infoFinal.text = "\(nomeShow)  -  \(dia)  -  \(hora)\n Nome:   \(nome) \n Cartão:   \(cartao)\n Inteiras:   \(String(qtdInteiras))    -    Meias:  \(String(qtdMeias)) \n Valor total da compra:  \(String(valorTot))"
+        infoFinal.text = " \(nomeShow)\n \(dia)  às \(hora)\n Nome:   \(nome) \n Cartão:   \(cartao)\n Inteiras:   \(String(qtdInteiras))    -    Meias:  \(String(qtdMeias)) \n Valor total da compra:  \(String(valorTot))"
 
     }
         
