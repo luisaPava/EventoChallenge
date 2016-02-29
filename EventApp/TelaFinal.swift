@@ -13,6 +13,7 @@ class TelaFinal: UIViewController {
     
     @IBOutlet weak var infoFinal: UITextView!
     
+    //variaveis que recebem os dados das telas anteriores
     
     var cidade : String!
     var dia : String!

@@ -57,6 +57,8 @@ class SelectedEvent: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //Funções de cada botão - Nicolas
+    
     
     
     @IBAction func RJSelectedEvent(sender: AnyObject) {

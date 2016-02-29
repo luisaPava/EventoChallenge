@@ -45,6 +45,7 @@ class LoginScreen: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    // Restrição para não ter campos vazios
     
     @IBAction func LoginToMain(sender: AnyObject) {
         

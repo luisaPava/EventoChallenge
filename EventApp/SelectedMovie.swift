@@ -50,6 +50,7 @@ class SelectedMovie: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
     @IBAction func comprar(sender: AnyObject) {
         
         
@@ -76,7 +77,7 @@ class SelectedMovie: UIViewController {
     }
     
     
-    
+    //Link para IMDB - Nicoalas
     
     
     

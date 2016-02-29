@@ -38,7 +38,7 @@ class TitleScreen: UIViewController {
     */
 
   
-    
+    //Nicolas - ação de cada botão para ir para a página de login ou de cadastro
     
     @IBAction func registerTitleScreen(sender: AnyObject) {
          performSegueWithIdentifier("TitleToRegister", sender: nil)

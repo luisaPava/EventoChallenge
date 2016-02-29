@@ -48,7 +48,7 @@ class Register2_Screen: UIViewController, UITextFieldDelegate  {
     @IBOutlet weak var confirmacaoSenhaTextView: UITextField!
     
     
-    
+    //RestriÇão para não ter campos vazios e a senha ser igual a confirmar senha
     
     @IBAction func ParaMain(sender: AnyObject) {
         

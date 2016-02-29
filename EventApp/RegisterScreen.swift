@@ -14,27 +14,11 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // changes mth 
      
-        
-        // Do any additional setup after loading the view.
-//        
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillShow:"), name: UIKeyboardWillShowNotification, object: nil)
-//        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name: UIKeyboardWillHideNotification, object: nil)
+
 
     }
     
-//    func keyboardWillShow(notification: NSNotification) {
-//        
-//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-//            self.view.frame.origin.y -= keyboardSize.height
-//        }
-//        
-//    }
-//    
-//    func keyboardWillHide(notification: NSNotification) {
-//        if let keyboardSize = (notification.userInfo?[UIKeyboardFrameBeginUserInfoKey] as? NSValue)?.CGRectValue() {
-//            self.view.frame.origin.y += keyboardSize.height
-//        }
-//    }
+
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
@@ -65,6 +49,8 @@ class RegisterScreen: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var cpfTextField: UITextField!
     
     @IBAction func proximoPasso(sender: AnyObject) {
+        
+        //Restrição para não ter campos vazios
         
         
         if nomeTextField.text!.isEmpty && cpfTextField.text!.isEmpty {

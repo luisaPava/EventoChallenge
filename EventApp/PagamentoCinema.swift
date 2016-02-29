@@ -102,16 +102,16 @@ class PagamentoCinema: UIViewController, UITextFieldDelegate  {
                 destinationVC.cidade = self.cinema
                 destinationVC.qtdMeias = self.qtdeMeias
                 destinationVC.qtdInteiras = self.qtdeInteiras
-//
+
                 destinationVC.valorTot = String(self.valorTot)
-//
+
                 destinationVC.nome = nomeCinema.text
                 destinationVC.cartao = numeroCartaoCinema.text
-//                
+                
                 destinationVC.dia = self.date
                 destinationVC.hora = self.hora
                 destinationVC.nomeShow = self.cinema
-//
+
             }
             
             

@@ -31,6 +31,8 @@ class CompraShow: UIViewController , UITextFieldDelegate {
 
     var show : String!
     
+    //Fuçõ controle do stepper
+    
     
     @IBAction func increaseDecreaseMeia(sender: AnyObject) {
         contagemMeia.text = String(Int(stepperMeia.value))
@@ -98,7 +100,7 @@ class CompraShow: UIViewController , UITextFieldDelegate {
     }
     */
     
-    
+    //Restrição de campos vazios e não ter selecionado ingressos
     
     @IBAction func confirmaCompraShow(sender: AnyObject) {
         

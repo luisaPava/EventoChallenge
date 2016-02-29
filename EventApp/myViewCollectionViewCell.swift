@@ -8,6 +8,8 @@
 
 import UIKit
 
+//image view dentro da collection view
+
 class myViewCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var imgView: UIImageView!

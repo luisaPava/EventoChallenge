@@ -131,16 +131,7 @@ class CompraCinema: UIViewController , ZSeatSelectorDelegate {
         stepperInteira.maximumValue = 10
         stepperInteira.minimumValue = 0
         
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
+
         
         
         let map:String =    "\nAAAAA_AAAAA/" +
@@ -236,7 +227,7 @@ class CompraCinema: UIViewController , ZSeatSelectorDelegate {
         
     }
     
-    
+     //Envio das informações
     
     
     

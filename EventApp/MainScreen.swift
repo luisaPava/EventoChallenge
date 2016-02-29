@@ -13,13 +13,18 @@ class MainScreen: UIViewController, UITableViewDataSource {
 
     @IBOutlet weak var table: UITableView!
     
+    //Contagem para acessar o a seleção no vetor - Luisa
+    
     var numeroSelecionado = 0
+    
+    //Vetores de imagens da main - luisa
     
     var dados1 = ["1.png","2.png", "3.png", "4.png", "5.png", "6.png"]
     var dados2 = ["7.png", "8.png", "9.png", "10.png", "11.png", "12.png"]
    
     
     //arrays em que entrarão as imagens wide para a tela de informações sobre o filme
+    
     var moviesWide = ["1wide.jpg","2wide.jpg", "3wide.jpg", "4wide.jpg", "5wide.jpg", "6wide.jpg"]
     var showsWide = ["7wide.jpg","8wide.jpg", "9wide.jpg", "10wide.jpg", "11wide.jpg", "12wide.jpg"]
 
@@ -47,10 +52,11 @@ class MainScreen: UIViewController, UITableViewDataSource {
         // Dispose of any resources that can be recreated.
     }
     
+    //Vetor dos títulos para cada Teble cell
 
     var opcoes = ["Cinema", "Shows/Eventos"]
     
-    
+    // Funções da table view
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return opcoes[section]
@@ -81,6 +87,8 @@ class MainScreen: UIViewController, UITableViewDataSource {
         
         return cell
     }
+    
+    //Segue que envia as informações ara a prócima página - Luisa
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         

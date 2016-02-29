@@ -8,6 +8,9 @@
 
 import UIKit
 
+
+//CalletionView Dentro de uma celular de Table view
+
 class CategoryRow: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UICollectionViewDelegate {
     
     var arr: [String] = []
